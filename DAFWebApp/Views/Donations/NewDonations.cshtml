@@ -1,0 +1,62 @@
+﻿@model IEnumerable<DAFWebApp.Models.Donations>
+
+@{
+    ViewData["Title"] = "NewDonations";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<body style="background-image: url(https://news.cgtn.com/news/7a596a4e346b544d33496a4e30556a4d33496a4e31457a6333566d54/img/e9ab7a0b17be41238efd5bb7122febb1/e9ab7a0b17be41238efd5bb7122febb1.jpg)" ;>
+    <h1>Donations Recieved</h1>
+
+   
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Quantity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Category)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                
+            </tr>
+            }
+        </tbody>
+    </table>
+    </body>

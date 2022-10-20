@@ -1,0 +1,45 @@
+﻿@model IEnumerable<DAFWebApp.Models.Monetary>
+
+@{
+    ViewData["Title"] = "MonetaryCaptured";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<body style="background-image: url(https://news.cgtn.com/news/7a596a4e346b544d33496a4e30556a4d33496a4e31457a6333566d54/img/e9ab7a0b17be41238efd5bb7122febb1/e9ab7a0b17be41238efd5bb7122febb1.jpg)" ;>
+    <h1>Monetary Captured</h1>
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(model => model.Id)
+                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.Amount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Amount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>

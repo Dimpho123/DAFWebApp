@@ -1,0 +1,57 @@
+﻿@model DAFWebApp.Models.Donations
+
+@{
+    ViewData["Title"] = "Goods";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<body style="background-image: url(https://news.cgtn.com/news/7a596a4e346b544d33496a4e30556a4d33496a4e31457a6333566d54/img/e9ab7a0b17be41238efd5bb7122febb1/e9ab7a0b17be41238efd5bb7122febb1.jpg)" ;>
+    <h1>Donations</h1>
+
+    
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Goods">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Id" class="control-label"></label>
+                    <input asp-for="Id" class="form-control" />
+                    <span asp-validation-for="Id" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ProductName" class="control-label"></label>
+                    <input asp-for="ProductName" class="form-control" />
+                    <span asp-validation-for="ProductName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Date" class="control-label"></label>
+                    <input asp-for="Date" class="form-control" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Quantity" class="control-label"></label>
+                    <input asp-for="Quantity" class="form-control" />
+                    <span asp-validation-for="Quantity" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Category" class="control-label"></label>
+                    <input asp-for="Category" class="form-control" />
+                    <span asp-validation-for="Category" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="btn btn-primary" />
+                </div>
+                <button type="button" onclick="location.href = '@Url.Action("Goods")'">Add</button>
+            </form>
+            @ViewBag.message
+        </div>
+    </div>
+
+
+
+</body>

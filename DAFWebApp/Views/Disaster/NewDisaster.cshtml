@@ -1,0 +1,53 @@
+﻿@model DAFWebApp.Models.Disaster
+
+@{
+    ViewData["Title"] = "NewDisaster";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<body style="background-image: url(https://news.cgtn.com/news/7a596a4e346b544d33496a4e30556a4d33496a4e31457a6333566d54/img/e9ab7a0b17be41238efd5bb7122febb1/e9ab7a0b17be41238efd5bb7122febb1.jpg)" ;>
+    <h1>New Disaster</h1>
+
+
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="NewDisaster">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Id" class="control-label"></label>
+                    <input asp-for="Id" class="form-control" />
+                    <span asp-validation-for="Id" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Location" class="control-label"></label>
+                    <input asp-for="Location" class="form-control" />
+                    <span asp-validation-for="Location" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Date" class="control-label"></label>
+                    <input asp-for="Date" class="form-control" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="requiredAid" class="control-label"></label>
+                    <input asp-for="requiredAid" class="form-control" />
+                    <span asp-validation-for="requiredAid" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+            @ViewBag.message
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</body>
